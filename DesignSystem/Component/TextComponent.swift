@@ -13,6 +13,7 @@ struct DesignSytemTextStyle: ViewModifier {
         case heading2
         case heading3
         case body
+        case medium
         case small
         case monospace
         case colored(Color)
@@ -31,6 +32,8 @@ struct DesignSytemTextStyle: ViewModifier {
             content.font(.system(size: 20, weight: .bold)).foregroundColor(foregroundColor(for: textColor))
         case .body:
             content.font(.body).foregroundColor(foregroundColor(for: textColor))
+        case .medium:
+            content.font(.system(size: 18, weight: .bold)).foregroundColor(foregroundColor(for: textColor))
         case .small:
             content.font(.caption).foregroundColor(foregroundColor(for: textColor))
         case .monospace:

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TextFieldStyle: ViewModifier {
     @FocusState private var isFocused: Bool
-
+    
     func body(content: Content) -> some View {
         content
             .padding(10)
@@ -22,14 +22,14 @@ struct TextFieldStyle: ViewModifier {
                 Rectangle()
                     .frame(height: 1)
                     .foregroundColor(isFocused ? .blue : Color(.systemGray4))
-                   .padding(.horizontal, 4)
+                    .padding(.horizontal, 4)
             }
             .focused($isFocused)
     }
 }
 struct TextFieldStyleWithUnderLine: ViewModifier {
     @FocusState private var isFocused: Bool
-
+    
     func body(content: Content) -> some View {
         content
             .padding(.vertical, 8)
@@ -43,7 +43,7 @@ struct TextFieldStyleWithUnderLine: ViewModifier {
                 Rectangle()
                     .frame(height: 1)
                     .foregroundColor(isFocused ? .blue : Color(.systemGray4))
-                   .padding(.horizontal, 4)
+                    .padding(.horizontal, 4)
             }
             .focused($isFocused)
     }
@@ -52,7 +52,7 @@ struct TextFieldStyleWithUnderLine: ViewModifier {
 
 struct TextFieldComponent: View {
     @State private var text: String = ""
-
+    
     var body: some View {
         TextField("Enter text", text: $text)
             .componentTextField()
