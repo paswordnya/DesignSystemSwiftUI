@@ -47,8 +47,6 @@ struct DesignSystemAlert: View {
     var body: some View {
        
             ZStack {
-               
-
                 VStack {
                     Text(message)
                         .foregroundColor(textColor)

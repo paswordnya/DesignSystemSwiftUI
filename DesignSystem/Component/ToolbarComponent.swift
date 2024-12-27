@@ -11,7 +11,6 @@ struct ToolbarComponent: View {
     let title: String
     let action: () -> Void
     let iconBack: String = "arrow.left"
-    
     @State private var imageSize: CGFloat = .zero
     
     
@@ -24,9 +23,9 @@ struct ToolbarComponent: View {
                     .onTapGesture {
                         action()
                     }
-                    .background( // Menggunakan background untuk mendapatkan ukuran yang benar
+                    .background(
                         GeometryReader { geometry in
-                            Color.clear // Background transparan
+                            Color.clear
                                 .onAppear {
                                     let size = CGSize(width: geometry.size.width, height: geometry.size.height)
                                     let average: CGFloat = (size.width + size.height) / 2

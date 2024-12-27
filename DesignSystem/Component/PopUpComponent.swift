@@ -23,7 +23,7 @@ struct PopupView: View {
                     isPresented = false // Menutup popup saat overlay di tap
                 }
             VStack {
-                Text(message).textStyle(.medium, .primary)
+                Text(message).componentTextStyle(.medium, .primary)
                     .padding()
                 Spacer()
                 Button("Close") {

@@ -33,7 +33,7 @@ struct DesignSytemTextStyle: ViewModifier {
         case .body:
             content.font(.body).foregroundColor(foregroundColor(for: textColor))
         case .medium:
-            content.font(.system(size: 18, weight: .bold)).foregroundColor(foregroundColor(for: textColor))
+            content.font(.system(size: 18, weight: .medium)).foregroundColor(foregroundColor(for: textColor))
         case .small:
             content.font(.caption).foregroundColor(foregroundColor(for: textColor))
         case .monospace:
@@ -62,11 +62,12 @@ struct TextComponent: View {
     var titleText : String = "Text"
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Heading 1").textStyle(.heading1)
-            Text("Paragraph text.").textStyle(.body)
-            Text("Small text.").textStyle(.small)
-            Text("Monospace text.").textStyle(.monospace)
-            Text("Colored text.").textStyle(.colored(.green))
+            Text("Heading 1").componentTextStyle(.heading1)
+            Text("Paragraph text.").componentTextStyle(.body)
+            Text("Medium text.").componentTextStyle(.medium)
+            Text("Small text.").componentTextStyle(.small)
+            Text("Monospace text.").componentTextStyle(.monospace)
+            Text("Colored text.").componentTextStyle(.colored(.green))
         }
         .padding()
     }

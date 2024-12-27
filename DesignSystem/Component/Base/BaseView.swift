@@ -14,7 +14,7 @@ import SwiftUI
 extension View {
     
     //Text Style
-    func textStyle(_ style: DesignSytemTextStyle.Style,_ textColor: GlobalStyleDesignSystem.Style = .dark) -> some View {
+    func componentTextStyle(_ style: DesignSytemTextStyle.Style,_ textColor: GlobalStyleDesignSystem.Style = .dark) -> some View {
         modifier(DesignSytemTextStyle(style: style, textColor: textColor))
     }
     
@@ -57,8 +57,6 @@ extension View {
     
  
     
-    
-    // 
     
     
     
